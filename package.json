@@ -1,0 +1,40 @@
+{
+  "name": "playboard-react",
+  "version": "0.0.1",
+  "description": "A React+Redux front-end for the Node playboard-api",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "mkdir -p dist && browserify -d src/index.js -o dist/index.js -t [ babelify ]",
+    "start": "static",
+    "watch": "mkdir -p dist && watchify -d src/index.js -o dist/index.js -t [ babelify ]"
+  },
+  "repository": {
+    "url": "git@github.com:okeeffe/playboard-react.git",
+    "type": "git"
+  },
+  "author": "Rory O'Keeffe <rorokeeffe@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-plugin-transform-react-jsx-source": "^6.9.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "eslint": "3.x",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-jsx-a11y": "latest",
+    "eslint-plugin-react": "^6.4.1",
+    "node-static": "^0.7.9",
+    "watchify": "^3.7.0"
+  }
+}
